@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C634007825113ADB003EB74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634007725113ADB003EB74D /* AppDelegate.swift */; };
+		C634007A25113ADB003EB74D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634007925113ADB003EB74D /* SceneDelegate.swift */; };
+		C634007C25113ADB003EB74D /* SplishSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634007B25113ADB003EB74D /* SplishSplashViewController.swift */; };
+		C634007F25113ADC003EB74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C634007D25113ADC003EB74D /* Main.storyboard */; };
+		C634008125113AE0003EB74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C634008025113AE0003EB74D /* Assets.xcassets */; };
+		C634008425113AE0003EB74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C634008225113AE0003EB74D /* LaunchScreen.storyboard */; };
+		C634008F25113AE0003EB74D /* SplishSplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634008E25113AE0003EB74D /* SplishSplashTests.swift */; };
+		C6E8882125114314007081E2 /* SplishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8882025114314007081E2 /* SplishView.swift */; };
+		C6E88823251147D7007081E2 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88822251147D7007081E2 /* SplashView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C634008B25113AE0003EB74D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C634006C25113ADB003EB74D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C634007325113ADB003EB74D;
+			remoteInfo = SplishSplash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C634007425113ADB003EB74D /* SplishSplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplishSplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C634007725113ADB003EB74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C634007925113ADB003EB74D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C634007B25113ADB003EB74D /* SplishSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplishSplashViewController.swift; sourceTree = "<group>"; };
+		C634007E25113ADC003EB74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C634008025113AE0003EB74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C634008325113AE0003EB74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C634008525113AE0003EB74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C634008A25113AE0003EB74D /* SplishSplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplishSplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C634008E25113AE0003EB74D /* SplishSplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplishSplashTests.swift; sourceTree = "<group>"; };
+		C634009025113AE0003EB74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E8882025114314007081E2 /* SplishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplishView.swift; sourceTree = "<group>"; };
+		C6E88822251147D7007081E2 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C634007125113ADB003EB74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C634008725113AE0003EB74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C634006B25113ADB003EB74D = {
+			isa = PBXGroup;
+			children = (
+				C634007625113ADB003EB74D /* SplishSplash */,
+				C634008D25113AE0003EB74D /* SplishSplashTests */,
+				C634007525113ADB003EB74D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C634007525113ADB003EB74D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C634007425113ADB003EB74D /* SplishSplash.app */,
+				C634008A25113AE0003EB74D /* SplishSplashTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C634007625113ADB003EB74D /* SplishSplash */ = {
+			isa = PBXGroup;
+			children = (
+				C634009925113B01003EB74D /* SupportingFiles */,
+				C6E8881F251142F1007081E2 /* View */,
+				C634009A25113B14003EB74D /* ViewController */,
+				C634007D25113ADC003EB74D /* Main.storyboard */,
+				C634008025113AE0003EB74D /* Assets.xcassets */,
+				C634008225113AE0003EB74D /* LaunchScreen.storyboard */,
+				C634008525113AE0003EB74D /* Info.plist */,
+			);
+			path = SplishSplash;
+			sourceTree = "<group>";
+		};
+		C634008D25113AE0003EB74D /* SplishSplashTests */ = {
+			isa = PBXGroup;
+			children = (
+				C634008E25113AE0003EB74D /* SplishSplashTests.swift */,
+				C634009025113AE0003EB74D /* Info.plist */,
+			);
+			path = SplishSplashTests;
+			sourceTree = "<group>";
+		};
+		C634009925113B01003EB74D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C634007725113ADB003EB74D /* AppDelegate.swift */,
+				C634007925113ADB003EB74D /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C634009A25113B14003EB74D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C634007B25113ADB003EB74D /* SplishSplashViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C6E8881F251142F1007081E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6E8882025114314007081E2 /* SplishView.swift */,
+				C6E88822251147D7007081E2 /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C634007325113ADB003EB74D /* SplishSplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C634009325113AE0003EB74D /* Build configuration list for PBXNativeTarget "SplishSplash" */;
+			buildPhases = (
+				C634007025113ADB003EB74D /* Sources */,
+				C634007125113ADB003EB74D /* Frameworks */,
+				C634007225113ADB003EB74D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplishSplash;
+			productName = SplishSplash;
+			productReference = C634007425113ADB003EB74D /* SplishSplash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C634008925113AE0003EB74D /* SplishSplashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C634009625113AE0003EB74D /* Build configuration list for PBXNativeTarget "SplishSplashTests" */;
+			buildPhases = (
+				C634008625113AE0003EB74D /* Sources */,
+				C634008725113AE0003EB74D /* Frameworks */,
+				C634008825113AE0003EB74D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C634008C25113AE0003EB74D /* PBXTargetDependency */,
+			);
+			name = SplishSplashTests;
+			productName = SplishSplashTests;
+			productReference = C634008A25113AE0003EB74D /* SplishSplashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C634006C25113ADB003EB74D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "casandra grullon";
+				TargetAttributes = {
+					C634007325113ADB003EB74D = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					C634008925113AE0003EB74D = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = C634007325113ADB003EB74D;
+					};
+				};
+			};
+			buildConfigurationList = C634006F25113ADB003EB74D /* Build configuration list for PBXProject "SplishSplash" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C634006B25113ADB003EB74D;
+			productRefGroup = C634007525113ADB003EB74D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C634007325113ADB003EB74D /* SplishSplash */,
+				C634008925113AE0003EB74D /* SplishSplashTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C634007225113ADB003EB74D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C634008425113AE0003EB74D /* LaunchScreen.storyboard in Resources */,
+				C634008125113AE0003EB74D /* Assets.xcassets in Resources */,
+				C634007F25113ADC003EB74D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C634008825113AE0003EB74D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C634007025113ADB003EB74D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C634007C25113ADB003EB74D /* SplishSplashViewController.swift in Sources */,
+				C6E8882125114314007081E2 /* SplishView.swift in Sources */,
+				C6E88823251147D7007081E2 /* SplashView.swift in Sources */,
+				C634007825113ADB003EB74D /* AppDelegate.swift in Sources */,
+				C634007A25113ADB003EB74D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C634008625113AE0003EB74D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C634008F25113AE0003EB74D /* SplishSplashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C634008C25113AE0003EB74D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C634007325113ADB003EB74D /* SplishSplash */;
+			targetProxy = C634008B25113AE0003EB74D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C634007D25113ADC003EB74D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C634007E25113ADC003EB74D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C634008225113AE0003EB74D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C634008325113AE0003EB74D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C634009125113AE0003EB74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C634009225113AE0003EB74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C634009425113AE0003EB74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRUP55ZMLQ;
+				INFOPLIST_FILE = SplishSplash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.casandragrullon.SplishSplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C634009525113AE0003EB74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRUP55ZMLQ;
+				INFOPLIST_FILE = SplishSplash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.casandragrullon.SplishSplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C634009725113AE0003EB74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRUP55ZMLQ;
+				INFOPLIST_FILE = SplishSplashTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.casandragrullon.SplishSplashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SplishSplash.app/SplishSplash";
+			};
+			name = Debug;
+		};
+		C634009825113AE0003EB74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRUP55ZMLQ;
+				INFOPLIST_FILE = SplishSplashTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.casandragrullon.SplishSplashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SplishSplash.app/SplishSplash";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C634006F25113ADB003EB74D /* Build configuration list for PBXProject "SplishSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C634009125113AE0003EB74D /* Debug */,
+				C634009225113AE0003EB74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C634009325113AE0003EB74D /* Build configuration list for PBXNativeTarget "SplishSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C634009425113AE0003EB74D /* Debug */,
+				C634009525113AE0003EB74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C634009625113AE0003EB74D /* Build configuration list for PBXNativeTarget "SplishSplashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C634009725113AE0003EB74D /* Debug */,
+				C634009825113AE0003EB74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C634006C25113ADB003EB74D /* Project object */;
+}
