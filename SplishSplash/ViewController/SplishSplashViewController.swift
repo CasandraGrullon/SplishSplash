@@ -10,12 +10,11 @@ import UIKit
 
 class SplishSplashViewController: UIViewController {
     
-    @IBOutlet weak var splishView: UIView!
+    private var splishView = SplishView()
     
-    private var tapped = false {
-        didSet {
-            
-        }
+    override func loadView() {
+        view = splishView
+        splishView.backgroundColor = .systemBackground
     }
     
     private lazy var tapGesture: UITapGestureRecognizer = {
@@ -23,19 +22,17 @@ class SplishSplashViewController: UIViewController {
         gesture.addTarget(self, action: #selector(didTap(_:)))
         return gesture
     }()
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        splishView.splish.alpha = 0
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGestureRecognizer(tapGesture)
+        
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-    }
-
+    
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
         //splish and splash methods
         splishAnimation()
@@ -48,14 +45,19 @@ class SplishSplashViewController: UIViewController {
         //4. animation duration = 0.2
         //5. delay = 1.5
         //6. fadesOut in 0.5 seconds
+        
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
-            self.splishView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-            self.splishView.alpha = 0.8
-        }) { (done) in
+            self.splishView.splish.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
+            self.splishView.splish.alpha = 0.8
+            let location = self.tapGesture.location(in: self.splishView)
+            self.splishView.splish.frame.origin = CGPoint(x: location.x, y: location.y)
+        })
+        { (done) in
             UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: {
-                self.splishView.alpha = 0
-            }) { (done) in
-                self.splishView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                self.splishView.splish.alpha = 0
+            })
+            { (done) in
+                self.splishView.splish.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         }
     }
