@@ -40,6 +40,7 @@ class SplishSplashViewController: UIViewController {
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
         //splish and splash methods
         splishAnimation()
+        splashAnimation()
     }
     
     private func splishAnimation() {
@@ -77,7 +78,25 @@ class SplishSplashViewController: UIViewController {
         }
     }
     private func splashAnimation() {
-        
+        UIView.animate(withDuration: 0.2, delay: 0.15, options: [.curveEaseOut], animations: {
+            //random color
+            self.splishView.splash.backgroundColor = self.randomColor()
+            
+            //present where user tapped
+            let location = self.splishView.splish.center
+            self.splishView.splash.center.x = location.x * 0.5
+            self.splishView.splash.center.y = location.y
+            
+            //scale up
+            self.splishView.splash.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
+            
+            //change alpha
+            self.splishView.splash.alpha = 0.8
+        }) { (done) in
+            UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: {
+                self.splishView.splash.alpha = 0
+            })
+        }
     }
     private func randomColor() -> UIColor {
         let randomRed = CGFloat.random(in: 0...1)
