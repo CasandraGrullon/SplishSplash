@@ -23,6 +23,8 @@ class SplishSplashViewController: UIViewController {
         return gesture
     }()
     
+    private var numberOfTaps = 0
+    
     private var splishSize = CGFloat()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,36 +44,54 @@ class SplishSplashViewController: UIViewController {
     
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
         //splish and splash methods
+        numberOfTaps += 1
         splishAnimation()
         splashAnimation()
     }
     
     private func splishAnimation() {
-        
+        let splishes = Array(0...self.numberOfTaps).map { number -> UIImageView in
+            let splish = UIImageView(frame: CGRect(origin: view.center, size: CGSize(width: 100, height: 100)))
+            splish.layer.cornerRadius = 50
+            self.view.addSubview(splish)
+            return splish
+        }
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
             //random color
-            self.splishView.splish.backgroundColor = self.randomColor()
+           // self.splishView.splish.backgroundColor = self.randomColor()
             
-            //present where user tapped
-            //TODO: present multiple splish views for every tap
             let location = self.tapGesture.location(in: self.splishView)
-            self.splishView.splish.center = location
-            
+            //let splish = self.splishView.splish
+            //splish.center = location
+
             //scale up
             //TODO: splish view grows between 60 - 150 pixels bigger randomly
             let size = self.splishScaleSize()
             self.splishSize = size
-            print(size)
-            self.splishView.splish.transform = CGAffineTransform(scaleX: size, y: size)
+            //self.splishView.splish.transform = CGAffineTransform(scaleX: size, y: size)
+            
+            //present where user tapped
+            //TODO: present multiple splish views for every tap
+            
+            for splish in splishes {
+                splish.backgroundColor = self.randomColor()
+                splish.center = location
+                splish.transform = CGAffineTransform(scaleX: size, y: size)
+                splish.alpha = 0.8
+            }
             
             //change alpha
-            self.splishView.splish.alpha = 0.8
+           // self.splishView.splish.alpha = 0.8
         })
         { (done) in
             UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: {
-                self.splishView.splish.alpha = 0
+                for splish in splishes {
+                    splish.alpha = 0
+                }
+                //self.splishView.
             })
         }
+        
     }
     private func splashAnimation() {
         UIView.animate(withDuration: 0.2, delay: 0.15, options: [.curveEaseOut], animations: {
@@ -108,7 +128,10 @@ class SplishSplashViewController: UIViewController {
     }
     private func splishScaleSize() -> CGFloat {
         let sizes = Array(6...15)
-        return CGFloat(sizes.randomElement() ?? 6) * 0.2
+        return CGFloat(sizes.randomElement() ?? 6) * 0.1
+    }
+    private func generateSplashes() {
+        
     }
 }
 

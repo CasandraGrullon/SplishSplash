@@ -44,7 +44,6 @@ class SplishView: UIView {
     private func splishConstraints() {
         addSubview(splish)
         splish.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             splish.widthAnchor.constraint(equalToConstant: 100),
             splish.heightAnchor.constraint(equalTo: splish.widthAnchor),
@@ -55,14 +54,11 @@ class SplishView: UIView {
     private func splashConstraints() {
         addSubview(splash)
         splash.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             splash.widthAnchor.constraint(equalTo: splish.widthAnchor, multiplier: 0.5),
             splash.heightAnchor.constraint(equalTo: splash.widthAnchor),
-            splash.centerXAnchor.constraint(equalTo: centerXAnchor),
-            splash.centerYAnchor.constraint(equalTo: centerYAnchor)
+            //splash.centerXAnchor.constraint(equalTo: centerXAnchor),
+            //splash.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
-    
-    
 }
