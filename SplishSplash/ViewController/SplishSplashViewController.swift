@@ -40,9 +40,7 @@ class SplishSplashViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
     }
-    @objc private func didTap(_ sender: UITapGestureRecognizer) {
-        //splish and splash methods
-        numberOfTaps += 1
+    private func createSplishes() -> [UIImageView] {
         let splishes = Array(0...numberOfTaps).map { number -> UIImageView in
             let location = self.tapGesture.location(in: self.view)
             let splish = UIImageView(frame: CGRect(origin: location, size: CGSize(width: 100, height: 100)))
@@ -50,21 +48,28 @@ class SplishSplashViewController: UIViewController {
             self.view.addSubview(splish)
             return splish
         }
+        splishSize = 100
+        return splishes
+    }
+    private func createSplashes() -> [UIImageView] {
         let random = Array(2...5).randomElement() ?? 2
         let randomPoint = Array(6...10)
         
         let splashes = Array(0...random).map { number -> UIImageView in
             let location = self.tapGesture.location(in: self.view)
-            
-            let splash = UIImageView(frame: CGRect(origin: location, size: CGSize(width: 100, height: 100)))
-            
+            let splash = UIImageView(frame: CGRect(origin: location, size: CGSize(width: splishSize, height: splishSize)))
             splash.center = CGPoint(x: location.x * CGFloat(randomPoint.randomElement() ?? 6) * 0.1, y: location.y * CGFloat(randomPoint.randomElement() ?? 6) * 0.1 )
             splash.layer.cornerRadius = 50
             self.view.addSubview(splash)
             return splash
         }
-        viewSplishes = splishes
-        viewSplashes = splashes
+        return splashes
+    }
+    @objc private func didTap(_ sender: UITapGestureRecognizer) {
+        //splish and splash methods
+        numberOfTaps += 1
+        let splishes = createSplishes()
+        let splashes = createSplashes()
         splishAnimation(splishes: splishes)
         splashAnimation(splishes: splishes, splashes: splashes)
     }
@@ -88,8 +93,6 @@ class SplishSplashViewController: UIViewController {
                 }
             })
         }
-        
-        
     }
     private func splashAnimation(splishes: [UIImageView], splashes: [UIImageView]) {
         UIView.animate(withDuration: 0.2, delay: 0.15, options: [.curveEaseOut], animations: {
@@ -121,9 +124,6 @@ class SplishSplashViewController: UIViewController {
     private func scaleSize(low: Int, high: Int) -> CGFloat {
         let sizes = Array(low...high)
         return CGFloat(sizes.randomElement() ?? 6) * 0.1
-    }
-    private func generateSplashes() {
-        
     }
 }
 
