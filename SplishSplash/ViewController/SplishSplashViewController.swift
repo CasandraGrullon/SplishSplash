@@ -47,16 +47,18 @@ class SplishSplashViewController: UIViewController {
         //6. fadesOut in 0.5 seconds
         
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
+            let location = self.tapGesture.location(in: self.splishView)
+            self.splishView.splish.center = location
             self.splishView.splish.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
             self.splishView.splish.alpha = 0.8
-            let location = self.tapGesture.location(in: self.splishView)
-            self.splishView.splish.frame.origin = CGPoint(x: location.x, y: location.y)
+            
         })
         { (done) in
             UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: {
                 self.splishView.splish.alpha = 0
             })
             { (done) in
+                self.splishView.splish.center = self.view.center
                 self.splishView.splish.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         }
