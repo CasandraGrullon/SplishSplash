@@ -57,17 +57,16 @@ class SplishSplashViewController: UIViewController {
     }
     private func createSplashes() -> [UIImageView] {
         let randomCount = Array(2...5).randomElement() ?? 2
-        let randomPoint = Array(6...10)
+        let randomPoint = CGFloat(Array(6...10).randomElement() ?? 2)
         
         let splashes = Array(0..<randomCount).map { number -> UIImageView in
             let location = self.tapGesture.location(in: self.view)
             let splash = UIImageView(frame: CGRect(origin: location, size: CGSize(width: splashSize, height: splashSize)))
-            splash.center = CGPoint(x: location.x * CGFloat(randomPoint.randomElement() ?? 6) + randomUnit(), y: location.y * CGFloat(randomPoint.randomElement() ?? 6) + randomUnit() )
+            splash.center = CGPoint(x: location.x * CGFloat(randomPoint) * 0.1, y: location.y)//CGPoint(x: location.x * CGFloat(randomPoint.randomElement() ?? 6) * 0.1, y: location.y * CGFloat(randomPoint.randomElement() ?? 6) * 0.1 )
             splash.layer.cornerRadius = splashSize / 2
             self.view.addSubview(splash)
             return splash
         }
-        
         return splashes
     }
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
@@ -76,15 +75,12 @@ class SplishSplashViewController: UIViewController {
         let splishes = createSplishes()
         splishAnimation(splishes: splishes)
         
-        var splashes = createSplashes()
-        
-        while splashes.count > 0 {
-            if let last = splashes.last {
-                splashAnimation(splishes: splishes, splash: last)
-                splashes.removeLast()
-            }
+        let splashes = createSplashes()
+        for splash in splashes {
+            splashAnimation(splishes: splishes, splash: splash)
         }
     }
+    //MARK:- Splish Animation
     private func splishAnimation(splishes: [UIImageView]) {
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
             let size = self.randomValue(low: 6, high: 15)
@@ -97,31 +93,41 @@ class SplishSplashViewController: UIViewController {
             }
         })
         { (done) in
-            UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: {
+            UIView.animate(withDuration: 0.2, delay: 1.5, options: [.layoutSubviews,.curveEaseOut], animations: {
                 for splish in splishes {
                     splish.alpha = 0
+                    let splashes = self.createSplashes()
+                    for splash in splashes {
+                        self.splashAnimation(splishes: splishes, splash: splash)
+                    }
                 }
             })
         }
     }
-    //1. animate for each seperate splash
+    //MARK:- Splash Animation
     private func splashAnimation(splishes: [UIImageView], splash: UIImageView) {
         UIView.animate(withDuration: 0.2, delay: 0.15, options: [.curveEaseOut], animations: {
             let randomSize = self.randomValue(low: 2, high: 4)
             self.splashSize = (self.splishSize * randomSize)
             
+            let randomPoint = CGFloat(Array(6...10).randomElement() ?? 2)
+            
             for splish in splishes {
                 splash.backgroundColor = splish.backgroundColor
+                splash.bounds.origin.y = splish.bounds.origin.y * CGFloat(randomPoint * self.randomUnit())
+                splash.bounds.origin.x = splish.bounds.origin.x * CGFloat(randomPoint * self.randomUnit())
+                //splash.center = CGPoint(x: splish.center.x * (CGFloat(randomPoint) * 0.1), y: splish.center.y)
+                splash.transform = CGAffineTransform(scaleX: self.splashSize, y: self.splashSize)
+                splash.alpha = 0.8
             }
-            splash.transform = CGAffineTransform(scaleX: self.splashSize, y: self.splashSize)
-            splash.alpha = 0.8
             
         }) { (done) in
-            UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.15, options: [.curveEaseOut], animations: {
                 splash.alpha = 0
             })
         }
     }
+    //MARK:- Random Value Generators
     private func randomColor() -> UIColor {
         let randomRed = CGFloat.random(in: 0...1)
         let randomBlue = CGFloat.random(in: 0...1)
