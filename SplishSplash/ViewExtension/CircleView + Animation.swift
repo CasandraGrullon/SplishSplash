@@ -30,7 +30,7 @@ extension UIView {
         
         //4. animate to scale and disappear 
         UIView.animate(withDuration: 0.2, delay: delay, options: [.curveEaseOut], animations: {
-            circle.transform = CGAffineTransform(scaleX: 1, y: 1)
+            circle.transform = CGAffineTransform(scaleX: 2, y: 2)
         })
         { (done) in
             UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveLinear], animations: {
