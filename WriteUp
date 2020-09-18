@@ -1,7 +1,13 @@
 After reading the project specs, I decided to use the MVC architecture. I kept most of the code within the main ViewController since the project was small. 
 The methods left in the view controller are related to the tap gesture functionality.
 
-I kept the circleAnimation and randomColor methods in seperate files to make it easier to access for any future features. 
-The circleAnimation method parameters include location, color and a delay that can be manipulated when called for the splish and the splashes.
+I kept the circleAnimation and randomColor methods in separate files to make it easier to access for any future features. 
 
-Overall, I tried to maintain clean code and followed the Swift best practices when writing my code.
+The circleAnimation method parameters include location, color and a delay that can be manipulated when called for the splish and the splashes.
+This method will handle creating new instances of a circle view and animate them by scaling up in size and becoming transparent.
+Since both the splish and splash views have these specs and are instantiated once a user taps the screen, I felt it was best to keep these animations within this one method.
+
+Within the SplishSplashViewController is the splishSplashAnimation method. This method generated a random size and color. These properties are used in the circleAnimation parameters. Within this method, I added a for loop to generate the splish views as well. Since the splash views' size, color and center are related to the splish, it is best to keep them within the same method.
+
+Overall, I tried to maintain clean code and followed the Swift best practices when writing my code. I am aware that there are other App Architectures, but I felt that MVC would work fine for a project this size.
+
