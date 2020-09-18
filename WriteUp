@@ -1,0 +1,7 @@
+After reading the project specs, I decided to use the MVC architecture. I kept most of the code within the main ViewController since the project was small. 
+The methods left in the view controller are related to the tap gesture functionality.
+
+I kept the circleAnimation and randomColor methods in seperate files to make it easier to access for any future features. 
+The circleAnimation method parameters include location, color and a delay that can be manipulated when called for the splish and the splashes.
+
+Overall, I tried to maintain clean code and followed the Swift best practices when writing my code.
