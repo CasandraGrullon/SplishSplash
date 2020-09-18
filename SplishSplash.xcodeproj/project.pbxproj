@@ -14,7 +14,8 @@
 		C634008125113AE0003EB74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C634008025113AE0003EB74D /* Assets.xcassets */; };
 		C634008425113AE0003EB74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C634008225113AE0003EB74D /* LaunchScreen.storyboard */; };
 		C634008F25113AE0003EB74D /* SplishSplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634008E25113AE0003EB74D /* SplishSplashTests.swift */; };
-		C6E8882125114314007081E2 /* SplishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8882025114314007081E2 /* SplishView.swift */; };
+		C6E8882125114314007081E2 /* CircleView + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8882025114314007081E2 /* CircleView + Animation.swift */; };
+		C6E88827251464AC007081E2 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88826251464AC007081E2 /* RandomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,8 @@
 		C634008A25113AE0003EB74D /* SplishSplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplishSplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C634008E25113AE0003EB74D /* SplishSplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplishSplashTests.swift; sourceTree = "<group>"; };
 		C634009025113AE0003EB74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6E8882025114314007081E2 /* SplishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplishView.swift; sourceTree = "<group>"; };
+		C6E8882025114314007081E2 /* CircleView + Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleView + Animation.swift"; sourceTree = "<group>"; };
+		C6E88826251464AC007081E2 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C634009925113B01003EB74D /* SupportingFiles */,
-				C6E8881F251142F1007081E2 /* View */,
+				C6E8881F251142F1007081E2 /* ViewExtension */,
 				C634009A25113B14003EB74D /* ViewController */,
 				C634007D25113ADC003EB74D /* Main.storyboard */,
 				C634008025113AE0003EB74D /* Assets.xcassets */,
@@ -118,12 +120,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		C6E8881F251142F1007081E2 /* View */ = {
+		C6E8881F251142F1007081E2 /* ViewExtension */ = {
 			isa = PBXGroup;
 			children = (
-				C6E8882025114314007081E2 /* SplishView.swift */,
+				C6E8882025114314007081E2 /* CircleView + Animation.swift */,
+				C6E88826251464AC007081E2 /* RandomColor.swift */,
 			);
-			path = View;
+			path = ViewExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +231,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C634007C25113ADB003EB74D /* SplishSplashViewController.swift in Sources */,
-				C6E8882125114314007081E2 /* SplishView.swift in Sources */,
+				C6E88827251464AC007081E2 /* RandomColor.swift in Sources */,
+				C6E8882125114314007081E2 /* CircleView + Animation.swift in Sources */,
 				C634007825113ADB003EB74D /* AppDelegate.swift in Sources */,
 				C634007A25113ADB003EB74D /* SceneDelegate.swift in Sources */,
 			);
